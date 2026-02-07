@@ -1,0 +1,125 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.44663538617778376 0.4730855625355056 0.7594121952762453 1.786780583982926
+  position -0.06982523256695766 -1.5375188230773806 2.7560151269351554
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorAppearance PBRAppearance {
+    roughness 1
+    roughnessMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/parquetry/chequered_parquetry_roughness.jpg"
+      ]
+    }
+    metalness 0
+    normalMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/parquetry/chequered_parquetry_normal.jpg"
+      ]
+    }
+    occlusionMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/parquetry/chequered_parquetry_occlusion.jpg"
+      ]
+    }
+  }
+  wallAppearance BrushedAluminium {
+    colorOverride 0.101961 0.372549 0.705882
+  }
+}
+E-puck {
+  hidden position_0_0 434.7131448080086
+  hidden position_0_1 431.2277662253455
+  hidden linearVelocity_0 -0.0021224653781696306 0.06920261802145262 0.001166985870065386
+  hidden angularVelocity_0 0.0867775429065897 0.06089677114172449 -1.9425923176860223
+  hidden rotation_1 0 -1 0 5.1098266945624315
+  hidden linearVelocity_1 -0.003598444799849853 0.11903772264602804 0.002446634506075762
+  hidden angularVelocity_1 -6.1861015039407645 -0.23841560985993754 -1.9608573436466883
+  hidden rotation_2 0 1 0 3.9711653371335958
+  hidden linearVelocity_2 -0.00029012546604478264 0.01845668141214163 -0.0003846817119732554
+  hidden angularVelocity_2 -0.6947971563682911 -0.02674473946589362 -1.9277335366935908
+  translation -0.463065224610119 -0.39785080619788565 -6.75216535830029e-05
+  rotation 0.0018694953859544252 -0.0008142326410494684 0.9999979210039429 1.5593693244900935
+  controller "my_py1_controller"
+}
+Wall {
+  translation 0.37 -0.25 0
+  rotation 0 0 1 -1.5707953071795862
+  name "wall(3)"
+  size 0.01 0.25 0.1
+  appearance Roughcast {
+    colorOverride 0.101961 0.372549 0.705882
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.25 0.38 0
+  size 0.01 0.25 0.1
+  appearance Roughcast {
+    colorOverride 0.101961 0.372549 0.705882
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation -0.25 0.01 0
+  name "wall(5)"
+  size 0.01 0.5 0.1
+  appearance Roughcast {
+    colorOverride 0.101961 0.372549 0.705882
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation -6.74634e-14 4.04052e-07 0
+  rotation 0 0 1 1.5708
+  name "wall(4)"
+  size 0.01 0.5 0.1
+  appearance Roughcast {
+    colorOverride 0.101961 0.372549 0.705882
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.25 -0.12 0
+  name "wall(1)"
+  size 0.01 0.25 0.1
+  appearance Roughcast {
+    colorOverride 0.101961 0.372549 0.705882
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  name "wall(2)"
+  size 0.01 0.5 0.1
+  appearance Roughcast {
+    colorOverride 0.101961 0.372549 0.705882
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
