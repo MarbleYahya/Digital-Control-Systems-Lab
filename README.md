@@ -122,6 +122,6 @@ The system integrates:
 
 ---
 
-**Python**
+
 
 
