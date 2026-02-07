@@ -3,7 +3,7 @@
 
 Autonomous navigation, maze exploration, and PID-based control of an e-puck robot in Webots.
 
-This repository contains the implementation of two major laboratory mini-projects developed for the **Computer Controlled Systems** course at **Amirkabir University of Technology**.
+This repository contains the implementation of two major laboratory mini-projects developed for the **Computer Controlled Systems** course .
 
 The projects focus on combining **robotics**, **search algorithms**, and **feedback control systems** in a simulated environment.
 
@@ -79,52 +79,46 @@ Motor commands are continuously updated according to the measured error.
 
 ---
 
-# Mini Project 2 — Maze Traversal using Search Algorithms
+# Mini Project 2 — Maze Traversal using Search Algorithms and Line Following
 
 ## Objective
-To implement and evaluate classical search algorithms for complete maze exploration using an autonomous mobile robot.
+To implement autonomous maze exploration combined with accurate line-following behavior using feedback control strategies.
 
 ## System Description
-The robot must traverse the environment, visit all reachable cells, and return to the starting position without human intervention.
+The robot must navigate inside the maze, discover two dedicated line-following zones, complete the tracking tasks, and finally return to the starting point without human intervention.
 
-The maze is modeled as a graph where nodes represent cells and edges correspond to feasible transitions.
+The environment is treated as a graph in which cells correspond to nodes and feasible movements define edges.  
+During exploration, the robot incrementally builds knowledge of the environment using onboard sensors.
 
-One of the following algorithms is employed:
+When a line-following zone is reached, the robot must:
 
-- **Depth-First Search (DFS):** Deep exploration with systematic backtracking.
-- **Breadth-First Search (BFS):** Level-wise exploration ensuring structured coverage.
-
-During navigation, the robot builds an internal map using real-time sensor measurements.
+- detect the black line on a white background  
+- compute the lateral tracking error  
+- apply PID-based velocity corrections  
+- follow the line until the segment is completed  
+- exit the zone and resume maze navigation  
 
 ## Algorithmic Approach
-The implementation includes:
+The system integrates:
 
-- environment perception  
-- visited-state tracking  
+- maze traversal using **BFS** or **DFS**  
+- visited-state management  
 - decision making at intersections  
-- backtracking or queue-based expansion depending on the strategy  
+- transition between exploration mode and line-following mode  
+- path memory for returning to the start position  
 
 ## Success Criteria
-- Complete coverage of accessible areas.
-- Correct real-time execution.
-- Reliable autonomous navigation.
-- Return to the initial position.
+- Successful exploration of reachable maze areas.
+- Detection and completion of both line-following zones.
+- Stable and accurate PID-based tracking.
+- Fully autonomous operation.
+- Correct return to the starting point.
 
 ## Deliverables
-- Implementation of BFS or DFS.
-- Webots controller integration.
+- Implementation of search and navigation algorithms.
+- PID-based line-following controller.
+- Integration within the Webots simulation.
 - Documentation of methodology and results.
-
----
-
----
-
-## 🛠 Technologies Used
-
-- **Python**
-- **Webots R2023b**
-- e-puck robot model
-- Feedback control & estimation methods
 
 ---
 
